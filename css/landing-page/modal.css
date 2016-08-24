@@ -1,0 +1,118 @@
+.modal-dialog{
+  max-width: 500px;
+}
+.modal-header{
+  background-color: #04d0ff;
+  color: #fff;
+  border: none;
+}
+.modal-header h4{
+  text-align: center;
+  font-weight: bold;
+  font-size: 18pt;
+  border-radius: 5px 5px 0px 0px;
+  text-transform: uppercase;
+}
+.close{
+  opacity: 1;
+  border: none;
+  text-shadow: none;
+  color: #fff;
+  position: absolute;
+  right: 15px;
+  font-size: 20pt;
+}
+.modal-body{
+  text-align: center;
+  padding: 20px 25px;
+}
+.social-network-sign-up{
+  padding-bottom: 15px;
+  display: none;
+}
+.social-network-sign-up > a{
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0px;
+  border: none !important;
+  font-size: 12pt;
+}
+.social-network-sign-up > a > span{
+  border: none !important;
+  line-height: 42px !important;
+}
+.social-network-sign-up > a > span.fa-facebook{
+  margin-left: 10px
+}
+.social-network-sign-up > a > span.fa-google-plus{
+  margin-left: 15px
+}
+.form-line{
+  height: 1px;
+  width: 100%;
+  background-color: #c5c5c5;
+  margin-bottom: 20px;
+  position: relative;
+  display: none;
+}
+.form-line > img{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  top: -5.5px;
+  height: 12px;
+}
+.form-group{
+  display: flex;
+}
+
+.form-control{
+  border-radius: 0px 4px 4px 0px;
+}
+
+.modal-icons{
+  background-color: #04d0ff;
+  color: white;
+  height: 34px;
+  padding: 0px 15px;
+  border-radius: 3px 0px 0px 3px;
+  line-height: 2.2;
+}
+
+.modal-icons > .ion-locked{
+  font-size: 18pt;
+  padding: 0px 2px;
+}
+
+#sign-up-form{
+  display: none;
+}
+
+#sign-up-form > .links,
+#sign-in-form > .links{
+  margin-bottom: 15px;
+  font-size: 11pt;
+}
+#sign-up-form > .links > a,
+#sign-in-form > .links > a{
+  padding: 0px 10px;
+}
+.sign-up-button{
+  border: none;
+  background-color: #04d0ff;
+  color: #fff;
+  font-size: 16pt;
+  width: 100%;
+  font-weight: bold;
+  padding: 5px 0px;
+  border-radius: 5px;
+  transition: all .3s ease-in-out;
+}
+.sign-up-button:hover{
+  background-color: #06a1c5;
+}
+
+#get-code{
+  cursor: pointer;
+}

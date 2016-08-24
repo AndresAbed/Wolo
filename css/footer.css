@@ -1,0 +1,94 @@
+footer{
+  background-color: #04d0ff;
+  text-align: center;
+  padding: 4em;
+  overflow: hidden;
+}
+
+.footer-menu > ul{
+  list-style: none;
+  display: block;
+  font-size: 14pt;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0;
+}
+
+.footer-menu > ul > li{
+  margin: 0px 30px;
+  display: inline;
+}
+
+.footer-menu > ul > li > a{
+  text-decoration: none;
+  color: #fff;
+}
+
+footer > section > img{
+  width: 250px;
+}
+
+ul.social {
+  padding: 1.5em;
+  list-style: none;
+  cursor: default;
+}
+
+ul.social li {
+  display: inline-block;
+  margin: 0 1.5em;
+}
+
+ul.social li a {
+  font-size: 2.75em;
+  display: inline-block;
+  
+}
+
+.social i{
+  color: #fff;
+}
+
+.social-text{
+  font-size: 1.7em;
+  color: #fff;
+}
+
+.copyright{
+  background-color: #04d0ff;
+  margin-bottom: -10px;
+  text-align: center;
+}
+
+.copyright .container{
+  padding: 3em;
+  border-top: 1px solid;
+  border-color: #fff;
+  color: #fff;
+}
+
+@media(min-width: 701px) and (max-width: 900px){
+  .footer-menu > ul > li {
+    margin: 0px 15px;
+  }
+}
+
+@media(max-width: 700px){
+  footer {
+    padding: 4em 2em;
+  }
+  .footer-menu > ul > li {
+    margin: 0 10px;
+  }
+}
+
+@media(max-width: 580px){
+  footer {
+    padding: 2em;
+  }
+  .footer-menu > ul > li {
+    margin: 20px 0px;
+    display: block;
+  }
+}

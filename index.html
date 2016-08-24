@@ -5,65 +5,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon.ico"/>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/arrow.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-social.css">
-    <link rel="stylesheet" type="text/css" href="css/modal.css">
-    <link rel="stylesheet" type="text/css" href="css/animate.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/grid.css">
-    <script src="js/welcome.js" type="text/javascript"></script>
-    <script src="js/footer.js" type="text/javascript"></script>
-    <script src="js/main.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/landing-page/arrows.css">
+    <link rel="stylesheet" type="text/css" href="css/landing-page/modal.css">
+    <link rel="stylesheet" type="text/css" href="css/landing-page/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/landing-page/strips.css">
+    <link rel="stylesheet" type="text/css" href="css/landing-page/index.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <script src="js/landing-page/welcome.js" type="text/javascript"></script>
+    <script src="js/landing-page/footer.js" type="text/javascript"></script>
+    <script src="js/landing-page/landing-page.js" type="text/javascript"></script>
   </head>
   <body>
-    <section id="vision">
-      <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="javascript:;">
-              <img class="navbar-logo" src="images/logo.svg">
-            </a>
-          </div>
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="javascript:;" class="sign-up-menu" data-toggle="modal" data-target="#sign-up-modal">Sign Up</a></li>
-              <li><a href="javascript:;">Sign In</a></li>
-            </ul>
-            <div class="nav navbar-nav navbar-right line"></div>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="javascript:;" class="vision-item active">Our vision</a></li>
-              <li><a href="javascript:;" class="welcome-item">Welcome</a></li>
-              <li><a href="javascript:;" class="discover-item">Discover</a></li>
-              <li><a href="javascript:;" class="community-item">Our Community</a></li>
-              <li><a href="javascript:;" class="about-item">About</a></li>
-            </ul>
-          </div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            <img class="navbar-logo" src="images/logo.svg">
+          </a>
         </div>
-      </nav>
-      <div class="content">  
-        <h1>You only live once</h1>
-        <h3>Connect with like-minded people to accomplish your dreams and celebrate life, together.</h3>
-        <button type="button" data-toggle="modal" data-target="#sign-up-modal">
-          Sign Up Free
-        </button>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="sign-up-menu" data-toggle="modal" data-target="#sign-up-modal">Sign Up</a></li>
+            <li><a data-toggle="modal" data-target="#sign-in-modal">Sign In</a></li>
+          </ul>
+          <div class="nav navbar-nav navbar-right navbar-vertical-line"></div>
+          <div class="navbar-horizontal-line"></div>
+          <ul class="nav navbar-nav navbar-right nav-sections">
+            <li><a href="javascript:;" class="vision-item active">Our vision</a></li>
+            <li><a href="javascript:;" class="welcome-item">Welcome</a></li>
+            <li><a href="javascript:;" class="discover-item">Discover</a></li>
+            <li><a href="javascript:;" class="community-item">Our Community</a></li>
+            <li><a href="javascript:;">About</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="filter"></div>
+    </nav>
+    <section id="vision">
+      <div class="content">  
+        <img src="images/landing-page/wolo-slogan.png">
+        <h3>Get early access and start checking off your bucket list with the Wolo community.</h3>
+        <div class="container">
+          <div id="codes-messages"></div>
+          <form id="codes-form">
+            <div class="form-group">
+              <label>Email</label>
+              <input class="form-control" type="email" name="code[email]" id="code_email">
+              <button name="button" type="submit" data-disable-with="<i class='fa fa-circle-o-notch fa-spin'></i> Sending...">Get my code</button>
+            </div>
+          </form>
+        </div>  
+      </div>
+      <video id="video_background" preload="auto" autoplay="autoplay" loop="loop" muted="">
+        <source src="videos/background_video.mp4" type="video/mp4">
+        <source src="videos/background_video.ogg" type="video/ogg">
+        <source src="videos/background_video.webm" type="video/webm">
+      </video>
+      <div class="vision-mobile-bg">
+        <div></div>
+      </div>
       <a href="javascript:;" class="scroll">
+        <span class="arrow"></span>
         <p>Learn more about Wolo</p>
         <span class="arrow"></span>
       </a>
+      <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Sign in</h4>
+            </div>
+            <div class="modal-body">
+              <form id="sign-in-form">
+                <div class="form-group">
+                  <span class="modal-icons"><img src="images/landing-page/icons/email.png"></span>
+                  <input autofocus="autofocus" class="form-control" placeholder="Enter your email" type="email" value="" name="user[email]" id="user_email">
+                </div>
+                <div class="form-group">
+                  <span class="modal-icons"><img src="images/landing-page/icons/key.png"></span>
+                  <input autocomplete="off" placeholder="Password" class="form-control" type="password" name="user[password]" id="user_password">
+                </div>
+                <div class="form-group">
+                  <input type="submit" name="commit" value="Sign In" class="sign-up-button">
+                </div>
+                <div class="links">
+                  <a href="javascript:;">Recover password</a>
+                  <a href="javascript:;">Resend confirmation email</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -72,38 +118,25 @@
               <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
             </div>
             <div class="modal-body">
+              <div id="sign-up-notifications"></div>
               <div class="social-network-sign-up">
-                <a class="btn btn-block btn-social btn-facebook" href="javascript:;">
-                <span class="fa fa-facebook"></span>Sign up with Facebook</a>
+                <%= link_to user_facebook_omniauth_authorize_path, class: 'btn btn-block btn-social btn-facebook', type:'button' do %>
+                  <span class="fa fa-facebook"></span>
+                  Sign up with Facebook
+                <% end %>  
                 <a class="btn btn-block btn-social btn-google-plus" href="javascript:;">
                 <span class="fa fa-google-plus"></span>Sign up with Google plus</a>
               </div>
-              <div class="form-line">
-                <img src="images/icons/circle.png" alt="">
-              </div>
-              <form id="sign-up-form" class="new_user" action="/users" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓"><div class="alert-section"></div>
+              <form id="referral-code-form">
                 <div class="form-group">
-                  <span class="modal-icons"><img src="images/icons/email.png"></i></span>
-                  <input placeholder="Enter your email" type="email" class="form-control" value="" name="user[email]" id="user_email">
-                </div>
+                  <span class="modal-icons"><img src="images/landing-page/icons/key.png"></span>
+                  <input type="text" name="referral_code" id="referral_code" autofocus="autofocus" class="form-control" placeholder="Enter your code">
+                </div>  
                 <div class="form-group">
-                <span class="modal-icons"><img src="images/icons/user.png"></span>
-                  <input placeholder="Enter your name" class="form-control" type="text" name="user[name]" id="user_name">
+                  <input type="submit" name="commit" value="Validate Early Access Code" class="sign-up-button">
                 </div>
-                <div class="form-group">
-                  <span class="modal-icons"><img src="images/icons/key.png"></span>
-                  <input placeholder="Password" type="password" class="form-control" name="user[password]" id="user_password">
-                </div>
-                <div class="form-group">
-                  <span class="modal-icons"><img src="images/icons/key.png"></span>
-                  <input placeholder="Password Confirmation" type="password" class="form-control" name="user[password_confirmation]" id="user_password_confirmation">
-                </div>
-                <div class="links">
-                  <a href="javascript:;">Recover password</a>
-                  <a href="javascript:;">Resend confirmation email</a>
-                </div>
-                <div class="form-group">
-                  <button type="button" class="sign-up-button">Sign Up</button>
+                <div>
+                    <p>Don't have an early access code? <a id="get-code">Get one.</a></p>
                 </div>
               </form>
             </div>
@@ -116,95 +149,168 @@
         <h1>Welcome to <b>Wolo</b></h1>
         <h3>Connect with like-minded people to accomplish your dreams and celebrate life, together.</h3>
         <div id="icons-line"></div>
-        <img src="images/icons/binoculars.png" alt="" id="discover-icon">
-        <img src="images/icons/team.png" alt="" id="friends-icon">
-        <img src="images/icons/calendar.png" alt="" id="planning-icon">
+        <img src="images/landing-page/icons/binoculars.png" alt="" id="discover-icon" class="welcome-icons icon-active animated infinite pulse">
+        <img src="images/landing-page/icons/team.png" alt="" id="friends-icon" class="welcome-icons">
+        <img src="images/landing-page/icons/calendar.png" alt="" id="planning-icon" class="welcome-icons">
+        <img id="welcome-first-arrow" class="next-icon-arrow" src="images/landing-page/icons/right-arrow.png">
+        <img id="welcome-second-arrow" class="next-icon-arrow" src="images/landing-page/icons/right-arrow.png">
       </div>
       <div class="container info">
-        <div class="discover">
+        <div id="discover" class="welcome-images image-active">
           <h2><b>Discover new experiences</b></h2>
           <h4>Easily add them to your bucket list!</h4>
-          <img src="images/pictures/discover.png" alt="">
+          <img src="images/landing-page/pictures/discover.png" alt="">
         </div>
-        <div class="friends">
+        <div id="friends" class="welcome-images">
           <h2><b>Find Friends</b></h2>
           <h4>Connect with Facebook friends and other Wolo community who share your interests.</h4>
-          <img src="images/pictures/profile.png" alt="">
+          <img src="images/landing-page/pictures/profile.png" alt="">
         </div>
-        <div class="planning">
+        <div id="planning" class="welcome-images">
           <h2><b>Start Planning</b></h2>
           <h4>Get advice from Wolo community who have already accomplished the things on your list and start planning your next experience with friends who still want to do them!</h4>
-          <img src="images/pictures/activity.png" alt="">
+          <img src="images/landing-page/pictures/activity.png" alt="">
+        </div>
+      </div>
+      <div class="panel-group features-accordion" id="accordion" role="tablist" aria-multiselectable="true">
+        <h2>Welcome to <b>Wolo</b></h2>
+        <h4>Connect with like-minded people to accomplish your dreams and celebrate life, together.</h4>
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingDiscover">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseDiscover" aria-expanded="true" aria-controls="collapseDiscover">
+              <img src="images/landing-page/icons/binoculars.png" alt="" id="discover-icon">
+              <h3><b>Discover new experiences</b></h3>
+            </a>
+          </div>
+          <div id="collapseDiscover" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingDiscover">
+            <div class="panel-body">
+              <h4><b>Easily add them to your bucket list!</b></h4>
+              <img src="images/landing-page/pictures/discover.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingFriends">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFriends" aria-expanded="false" aria-controls="collapseFriends">
+              <img src="images/landing-page/icons/team.png" alt="" id="friends-icon" class="welcome-icons">
+              <h3><b>Find Friends</b></h3>
+            </a>
+          </div>
+          <div id="collapseFriends" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFriends">
+            <div class="panel-body">
+              <h4><b>Connect with Facebook friends and other Wolo community who share your interests.</b></h4>
+              <img src="images/landing-page/pictures/profile.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingPlanning">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsePlanning" aria-expanded="false" aria-controls="collapsePlanning">
+              <img src="images/landing-page/icons/calendar.png" alt="" id="planning-icon" class="welcome-icons">
+              <h3><b>Start Planning</b></h3>
+            </a>
+          </div>
+          <div id="collapsePlanning" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingPlanning">
+            <div class="panel-body">
+              <h4><b>Get advice from Wolo community who have already accomplished the things on your list and start planning your next experience with friends who still want to do them!</b></h4>
+              <img src="images/landing-page/pictures/activity.png" alt="">
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <section id="discover">
+    <section id="take-a-look">
       <div class="container header">
         <h1><b>Take a look around</b></h1>
+        <h3>See some of the awesome activities you can do</h3>
       </div>
-      <div class="container-fluid grid">
-        <ul id="rig">
-          <li>
-            <a class="rig-cell" href="javascript:;">
-              <img class="rig-img" src="images/pictures/grand-canyon.jpg">
-              <span class="rig-overlay"></span>
-              <span class="rig-text">See The Grand Canyon</span>
-            </a>
-          </li>
-          <li>
-            <a class="rig-cell" href="javascript:;">
-              <img class="rig-img" src="images/pictures/coachella.jpg">
-              <span class="rig-overlay"></span>
-              <span class="rig-text">Experience Coachella</span>
-            </a>
-          </li>
-          <li>
-            <a class="rig-cell" href="javascript:;">
-              <img class="rig-img" src="images/pictures/glastonbury.jpg">
-              <span class="rig-overlay"></span>
-              <span class="rig-text">Experience Glastonbury in England</span>
-            </a>
-          </li>
-          <li>
-            <a class="rig-cell" href="javascript:;">
-              <img class="rig-img" src="images/pictures/learn-spanish.jpg">
-              <span class="rig-overlay"></span>
-              <span class="rig-text">Learn Spanish</span>
-            </a>
-          </li>
-          <li>
-            <a class="rig-cell" href="javascript:;">
-              <img class="rig-img" src="images/pictures/machu-pichu.jpg">
-              <span class="rig-overlay"></span>
-              <span class="rig-text">Visit Machu Picchu</span>
-            </a>
-          </li>
-          <li>
-            <a class="rig-cell" href="javascript:;">
-              <img class="rig-img" src="images/pictures/oktoberfest.jpg">
-              <span class="rig-overlay"></span>
-              <span class="rig-text">Go To Oktoberfest</span>
-            </a>
-          </li>
-          <li>
-            <a class="rig-cell" href="javascript:;">
-              <img class="rig-img" src="images/pictures/patagonia.jpg">
-              <span class="rig-overlay"></span>
-              <span class="rig-text">Backpack Patagonia</span>
-            </a>
-          </li>
-          <li>
-            <a class="rig-cell" href="javascript:;">
-              <img class="rig-img" src="images/pictures/skydiving.jpg">
-              <span class="rig-overlay"></span>
-              <span class="rig-text">Go Skydiving</span>
-            </a>
-          </li>
-        </ul>
+      <div class="strips top">
+        <article class="strips__strip">
+          <div class="strip__content_top">
+            <h1 class="strip__title">See The Grand Canyon</h1>
+            <div class="strip__inner-text">
+              <h2>See the Grand Canyon</h2>
+              <p>Considered one of the greatest tourist attractions in the United States, this is not your average canyon. Boasting an elevation change of 7,000 feet and some of the best hiking and whitewater rafting on this side of the Rockies should earn this beauty a high spot on your list.</p>
+            </div>
+            <div class="strips-descriptions-filter"></div>
+          </div>
+        </article>
+        <article class="strips__strip">
+          <div class="strip__content_top">
+            <h1 class="strip__title">Experience Coachella</h1>
+            <div class="strip__inner-text">
+              <h2>Experience Coachella</h2>
+              <p>Coachella will always hold a special place in the hearts of Wolo founders Mike and Ray. And why wouldnt it? You get to spend an entire weekend listening to the best musicians in the world with 100,000 amazing people. Did we mention that it's in the beautiful Coachella valley against a breathtaking backdrop of Palm trees and mountains?</p>
+            </div>
+            <div class="strips-descriptions-filter"></div>
+          </div>
+        </article>
+        <article class="strips__strip">
+          <div class="strip__content_top">
+            <h1 class="strip__title">Experience Glastonbury in England</h1>
+            <div class="strip__inner-text">
+              <h2>Experience Glastonbury in England</h2>
+              <p>Regarded as one of the best music festivals in the world, Glastonbury has been blowing people's minds since 1970. This five day festival sees 175,000 music enthusiasts every June. Glastonbury must be on your bucket list if you are a music festival lover!</p>
+            </div>
+            <div class="strips-descriptions-filter"></div>
+          </div>
+        </article>
+        <article class="strips__strip">
+          <div class="strip__content_top">
+            <h1 class="strip__title">Learn Spanish</h1>
+            <div class="strip__inner-text">
+              <h2>Learn Spanish</h2>
+              <p>Más guacamole, por favor! If you love Mexican food, but have no idea what that means, you’ve come to the right place. Join the Wolo community and find friends to practice your Español. You’ll be ordering your next burrito like a pro in no time.</p>
+            </div>
+            <div class="strips-descriptions-filter"></div>
+          </div>
+        </article>
+      </div>
+      <div class="strips">
+        <article class="strips__strip">
+          <div class="strip__content_bottom">
+            <h1 class="strip__title">Visit Machu Picchu</h1>
+            <div class="strip__inner-text">
+              <h2>Visit Machu Picchu</h2>
+              <p>Recently declared the world’s top landmark, this wonder of the modern world is perched high in the Andes Mountains of Peru. A breathtaking experience that will literally leave you short of breath if you’re not careful, altitude anyone?</p>
+            </div>
+            <div class="strips-descriptions-filter"></div>
+          </div>
+        </article>
+        <article class="strips__strip">
+          <div class="strip__content_bottom">
+            <h1 class="strip__title">Go to Oktoberfest</h1>
+            <div class="strip__inner-text">
+              <h2>Go to Oktoberfest</h2>
+              <p>Do you enjoy delicious German beer, Würstl and Blaukraut? Do you want to do your part in helping drink the 8 million liters of beer consumed each year during the world’s largest beer festival? We thought so. We also think it’s about time you stopped dilly dallying and started planning your epic trip. Prost!</p>
+            </div>
+          <div class="strips-descriptions-filter"></div>
+          </div>
+        </article>
+        <article class="strips__strip">
+          <div class="strip__content_bottom">
+            <h1 class="strip__title">Backpack Patagonia</h1>
+            <div class="strip__inner-text">
+              <h2>Backpack Patagonia</h2>
+              <p>Patagonia is the ultimate fantasy for anyone interested in hiking. Situated in the south of Chile and Argentina, Patagonia consists of craggy mountains crowned with glaciers and glistening with waterfalls. The glacial lakes, flowering meadows, marshlands, and windblown cliffs that skirt the Magellan Strait present countless opportunities for exploration on foot. The best way to see the breathtaking landscapes is of course with equally excited and fun people! Form your trekking party with Wolo and get going!</p>
+            </div>
+          <div class="strips-descriptions-filter"></div>
+          </div>
+        </article>
+        <article class="strips__strip">
+          <div class="strip__content_bottom">
+            <h1 class="strip__title">Go Skydiving</h1>
+            <div class="strip__inner-text">
+              <h2>Go Skydiving</h2>
+              <p>You’re not afraid of heights, are you? Don’t worry, so is just about everyone else on this planet. Lucky for you, there is now an easy way to meet awesome people to conquer your fears with!</p>
+            </div>
+          <div class="strips-descriptions-filter"></div>
+          </div>
+        </article>
       </div>
       <div class="footer">
         <h1><b>Feeling inspired? Join for free.</b></h1>
-        <button type="button" data-toggle="modal" data-target="#sign-up-modal">
+        <button type="button" id="ready">
           I'm Ready
         </button>
       </div>
@@ -224,32 +330,32 @@
           </ol>
           <div class="carousel-inner" role="listbox">
             <div class="item active">
-              <img src="images/community/1.jpg" alt="">
+              <img src="images/landing-page/community/1.jpg" alt="">
               <div class="carousel-caption">
                 <p>"Having travel advice from all of my friends in one place has made trip planning so much easier!" ~Ray</p>
               </div>
             </div>
             <div class="item">
-              <img src="images/community/2.jpg" alt="">
+              <img src="images/landing-page/community/2.jpg" alt="">
               <div class="carousel-caption">
                 <p>"Wolo helped the hubby and I find a great group to explore New Orleans with last month, such a fun experience!" ~Mary</p>
               </div>
             </div>
             <div class="item">
-              <img src="images/community/3.jpg" alt="">
+              <img src="images/landing-page/community/3.jpg" alt="">
               <div class="carousel-caption">
                 <p>"Wolo helped me discover a new group of awesome people to practice martial arts with in Santiago. I didn’t even know I liked martial arts..."  ~Andrew</p>
               </div>
             </div>
             <div class="item">
-              <img src="images/community/4.jpg" alt="">
+              <img src="images/landing-page/community/4.jpg" alt="">
               <div class="carousel-caption">
                 <p>"I feel like I got the travel bug all over again once I started using Wolo, I can’t wait to start checking things off my list!"
                 ~Elliot</p>
               </div>
             </div>
             <div class="item">
-              <img src="images/community/5.jpg" alt="">
+              <img src="images/landing-page/community/5.jpg" alt="">
               <div class="carousel-caption">
                 <p>"It was tough to find training buddies interested in riding a bazillion miles through the hills of California...before I found Wolo that is." ~Jen</p>
               </div>
@@ -267,29 +373,24 @@
       </div>
     </section>
     <footer id="footer">
-        <section>
-          <nav class="footer-menu">
-            <ul>
-              <li>About</li>
-              <li>Blog</li>
-              <li>Privacy Policy</li>
-              <li>Terms of Service</li>
-            </ul>
-          </nav>  
-          <img src="images/logo.svg" alt="">
-          <ul class="social">
-            <li><a href="https://www.facebook.com/becausewolo" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="javascript:;" target="_blank"><i class="fa fa-google-plus"></i></a></a></li>
-            <li><a href="javascript:;" target="_blank"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="javascript:;" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      <section>
+        <nav class="footer-menu">
+          <ul>
+            <li><a href="javascript:;">About</a></li>
+            <li><a target="javascript:;" href="http://www.becausewolo.blogspot.com">Blog</a></li>
+            <li><a href="javascript:;">Privacy policy</a></li>
+            <li><a href="javascript:;">Terms of service</a></li>
           </ul>
-          <span class="social-text">Follow us in social media</span>
-        </section>
+        </nav>  
+        <img src="images/logo.svg">
+        <ul class="social">
+          <li><a href="https://www.facebook.com/becausewolo" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://plus.google.com/102271997631751777851/posts" target="_blank"><i class="fa fa-google-plus"></i></a></a></li>
+          <li><a href="https://www.instagram.com/becausewolo/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://twitter.com/becausewolo/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        </ul>
+        <span class="social-text">Follow us in social media</span>
+      </section>
     </footer>
-    <div class="copyright">
-      <div class="container">
-        <p style="font-size: 0.9em;">© 2016 WOLO. All Rights Reserved</p>
-      </div>
-    </div>
   </body>
 </html>

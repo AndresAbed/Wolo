@@ -1,16 +1,3 @@
-*{font-family: 'Source Sans Pro', sans-serif;}
-p{
-  margin: 0;
-  padding: 0;
-}
-
-html, body{
-  height: 100%;
-  width: 100%;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
 #vision{
   width: 100%;
   height: 100vh;
@@ -185,7 +172,7 @@ html, body{
 }
 
 #welcome{
-  background-image: url("../../images/landing-page/features-bg.jpg");
+  background-image: url("../../images/gray-bg.jpg");
 }
 
 /* Welcome accordion styles begin */
@@ -394,7 +381,7 @@ html, body{
 #take-a-look{
   padding-bottom: 40px;
   text-align: center;
-  background-image: url("../../images/landing-page/features-bg.jpg");
+  background-image: url("../../images/gray-bg.jpg");
   position: relative;
 }
 

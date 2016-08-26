@@ -1,0 +1,246 @@
+.discover-header{
+  text-align: center;
+  background-image: url("../images/gray-bg.jpg");
+  height: 200px;
+  width: 100%;
+  margin-top: 70px;
+  display: inline-block;
+}
+
+.discover-header > h5{
+  margin-top: 25px;
+  font-weight: bold;
+  background-color: #6cbdc4;
+  width: 150px;
+  margin: 30px auto 0;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.discover-header > .search-fields > label{
+  position: relative;
+  margin: 0 10px;
+}
+
+.discover-header > .search-fields > label > i{
+  position: absolute;
+  color: #fff;
+  left: 12px;
+  top: 14px;
+  font-size: 16pt;
+}
+
+.discover-header > .search-fields > label > .search-field{
+  width: 300px;
+  display: initial;
+  vertical-align: middle;
+  border: none;
+  font-weight: bold;
+  height: 50px;
+  color: #fff;
+  background-color: #6cbdc4;
+  font-size: 12pt;
+  padding-left: 40px;
+}
+.discover-header > .search-fields > label > .search-field:focus{
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.discover-header > .search-fields > label > .search-field::-webkit-input-placeholder{color: #fff;}
+.discover-header > .search-fields > label > .search-field:-moz-placeholder {color: #fff;}
+.discover-header > .search-fields > label > .search-field::-moz-placeholder {color: #fff;}
+.discover-header > .search-fields > label > .search-field:-ms-input-placeholder {color: #fff;}
+
+.discover-header > .search-fields > select{
+  width: 300px;
+  color: #fff;
+  border: none;
+  height: 50px;
+  font-weight: bold;
+  font-size: 12pt;
+  margin: 0 10px;
+  box-shadow: none;
+  background-color: #6cbdc4;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../images/sort-down.png");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 15px;
+}
+
+.discover-header > .search-fields > select:hover,
+.discover-header > .search-fields > select:focus,
+.discover-header > .search-fields > select:active{
+  background-color: #6cbdc4;
+  color: #fff;
+  outline: none;
+}
+
+.discover-header > .search-fields > select option{
+  background-color: #6cbdc4;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: none;
+  border-radius: 10px;
+}
+
+.activities{
+  background-image: url("../images/gray-bg.jpg");
+  padding-bottom: 40px;
+}
+
+.image-container{
+  text-align: center;
+}
+
+.tile {
+  width: 30%;
+  height: 300px;
+  display: inline-block;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  margin: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.activity-layout {
+  width: 100%;
+  height: 100%;
+  color: white;
+  position: absolute;
+  top: 100%;
+  font-size: .9em;
+  text-align: center;
+  line-height: 1em;
+  background-color: rgba(108, 189, 196, .8);
+  transition: 0.3s ease-in;
+  font-weight: bold;
+  line-height: 250px;
+}
+
+.tile:hover .activity-layout {
+  top: 0;
+}
+
+.activity-layout > h1 {
+  font-weight: bold;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+}
+
+.activity-layout > .icons{
+  position: absolute;
+  top: 70px;
+  font-size: 30pt;
+  left: 0;
+  right: 0;
+}
+
+.activity-layout > .icons > i{
+  padding: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .discover-header > .search-fields{
+    margin: 0 auto;
+  }
+  .discover-header > .search-fields > label > .search-field,
+  .discover-header > .search-fields > select{
+    height: 40px;
+  }
+  .discover-header > .search-fields > label{
+    position: relative;
+    margin: 0 5px;
+  }
+  .discover-header > .search-fields > select{
+    background-size: 13px;
+    margin: 0 5px;
+  }
+  .discover-header > .search-fields > label > i{
+    top: 12px;
+    font-size: 14pt;
+  }
+  .image-container .tile {
+    width: 30%;
+    padding-bottom: 25%;
+  }
+  .activity-layout > h1 {
+    font-size: 22pt;
+  }
+  .activity-layout > .icons{
+    font-size: 25pt;
+  }
+}
+
+@media screen and (max-width: 965px) {
+  .activities{
+    padding-top: 20px;
+  }
+  .discover-header{
+    height: 275px;
+  }
+  .discover-header > .search-fields > label{
+    position: relative;
+    margin: 5px 100px;
+    width: 45%;
+  }
+  .discover-header > .search-fields > label > .search-field{
+    width: 100%;
+  }
+  .discover-header > .search-fields > select{
+    background-size: 13px;
+    width: 45%;
+    margin: 5px 100px;
+  }
+  .image-container .tile{
+    width: 40%;
+  }
+}
+
+@media (max-width: 767px){
+  .discover-header{
+    margin-top: 0;
+  }
+  .discover-header > .search-fields > label,
+  .discover-header > .search-fields > select{
+    width: 60%;
+    margin: 5px 0;
+  }
+  .image-container .tile{
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .image-container .tile {
+    width: 80%;
+  }
+}
+
+@media (max-width: 450px){
+  .discover-header > .search-fields > label, 
+  .discover-header > .search-fields > select{
+    width: 75%;
+  }
+}
+
+@media (max-width: 377px){
+  .discover-header{
+    height: 315px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .image-container .tile {
+    width: 95%;
+    margin: 5px 0;
+  }  
+}
